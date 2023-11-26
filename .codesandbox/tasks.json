@@ -16,23 +16,23 @@
     },
     "build": {
       "name": "build",
-      "command": "npm run build",
-      "runAtStart": false
+      "command": "npm run build"
     },
     "test": {
       "name": "test",
-      "command": "npm run test",
-      "runAtStart": false
+      "command": "npm run test"
     },
     "eject": {
       "name": "eject",
-      "command": "npm run eject",
-      "runAtStart": false
+      "command": "npm run eject"
     },
     "npm start": {
       "name": "npm start",
       "command": "npm start",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 3001
+      }
     }
   }
 }
