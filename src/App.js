@@ -1,6 +1,8 @@
 import {Component} from 'react';
 import './App.css';
 import CardList from './components/card-list/card-list.component';
+import SearchBox from './components/search-box/search-box.component';
+import MESSAGES from './constants/constants';
 
 
 class App extends Component{
@@ -20,7 +22,7 @@ class App extends Component{
         })
       )
       .catch((error)=>{
-        throw('I have an error: ',error)
+        throw(`${MESSAGES.ERROR_MESSAGE}`,error)
       })
   }
 
@@ -39,13 +41,14 @@ class App extends Component{
     })
     return [
       <div key={'AppCaller'} className="App">
-        <input 
+        <SearchBox
           className='search-box'
-          type='search'
-          placeholder='search monsters'
-          onChange={onSearchChange}  
+          onChangeHandler={onSearchChange}
+          placeholder={MESSAGES.MESSAGE_SEARCHBOX}
         />
-        <CardList monsters={filteredMonsters}/>
+        <CardList 
+          monsters={filteredMonsters}
+        />
       </div>
       
     ];
