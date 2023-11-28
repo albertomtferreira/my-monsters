@@ -4,9 +4,9 @@ import './card-selector.styles.css';
 const CardSelector = ({onChangeHandler})=>{
   return[
     <div className='select-container'>
-      <label className='calisto f4'>Select your RoboHash </label>
+      <label className='calisto f4 lightest-blue'>Select your RoboHash </label>
       <select
-        className='br4' 
+        className='br4 ' 
         name='item-selected'
         onChange={onChangeHandler}
         defaultValue='1'
