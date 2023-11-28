@@ -1,11 +1,12 @@
 import './card.styles.css';
 
-const Card = ({monster:{name,id,username,email}})=>{
+const Card = ({monster:{name,id,username,email},selectedMonster})=>{
   return[
     <div className='card-container' key={id}>
       <img 
+        className='image-robot'
         alt={`monster ${name}`}
-        src={`https://robohash.org/${id}?set=set3&size=180x180`}
+        src={`https://robohash.org/${id}?set=set${selectedMonster}&size=180x180`}
       />
       <div className='card-text'>
         <div className='inline-card'><h6 className='labels-card'>Name:</h6><h2>{name}</h2></div>
