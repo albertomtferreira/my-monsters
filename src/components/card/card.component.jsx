@@ -1,7 +1,6 @@
 import './card.styles.css';
 
 const Card = ({monster:{name,id,username,email}})=>{
-  
   return[
     <div className='card-container' key={id}>
       <img 
@@ -16,6 +15,5 @@ const Card = ({monster:{name,id,username,email}})=>{
     </div>
   ]
 }
-      
 
 export default Card;
