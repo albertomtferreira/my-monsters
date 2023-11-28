@@ -3,7 +3,7 @@ import './card-selector.styles.css';
 
 const CardSelector = ({onChangeHandler})=>{
   return[
-    <div className='select-container'>
+    <div key={'card-selector'} className='select-container'>
       <label className='calisto f4 lightest-blue'>Select your RoboHash </label>
       <select
         className='br4 ' 
